@@ -1,0 +1,10 @@
+<div id="container">    
+<h1>Contacto</h1>
+<label for="widtSlider">Tamaño:</label>
+<input name="widtSlider" type="number" [(ngModel)]="widtSlider" />
+<div *ngIf="widtSlider>0">
+
+<slider [anchura]="widtSlider"></slider>
+</div>
+</div>
+

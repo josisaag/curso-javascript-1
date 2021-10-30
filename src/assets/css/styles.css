@@ -1,0 +1,271 @@
+/*Importar fuentes custom*/
+@font-face {
+  font-family: "Yanone";
+  src: url("font/Yanone.ttf");
+}
+@font-face {
+  font-family: "Titillium";
+  src: url("font/Titillium.ttf");
+}
+@font-face {
+  font-family: "Finger";
+  src: url("font/Finger.ttf");
+}
+/**/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Estilos generales*/
+body {
+  font-family: "Yanone", Arial, Helvetica;
+  font-size: 20px;
+  background: url("../img/pattern.png");
+  background-attachment: fixed;
+}
+header {
+  width: 100%;
+  height: 90px;
+  background: rgba(53, 103, 164, 0.8);
+  position: fixed;
+  display: block;
+  text-transform: uppercase;
+}
+.clearfix {
+  float: block;
+  clear: both;
+}
+header li {
+  display: inline-block;
+  line-height: 90px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+header ul {
+  display: block;
+  width: 50%;
+  height: inherit;
+  margin: 0px auto;
+  margin-top: -4px;
+}
+header ul li a {
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: inherit;
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+  line-height: 90px;
+}
+header a:hover,
+.actived {
+  background: rgba(0, 0, 0, 0.8);
+}
+#logo a:hover {
+  background: transparent;
+  color: black;
+  transform: scale(1.5, 1.5);
+}
+#logo a {
+  transition: color 500ms, transform 500ms;
+}
+#logo {
+  font-size: 30px;
+  font-family: "Finger";
+}
+/*Contenedor*/
+#content {
+  min-height: 600px;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  padding-top: 120px;
+  width: 75%;
+  margin: 0px auto;
+  box-shadow: 0px 0px 40px black;
+  background: rgba(255, 255, 255, 0.7);
+}
+/*Pie de pagina*/
+footer {
+  width: 75%;
+  margin: 0px auto;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+/*Sobre mi*/
+#title {
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#title h1 {
+  font-family: "finger";
+  font-size: 60px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+#title h2 {
+  font-size: 25px;
+  color: gray;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+article.about {
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.about h2 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.about p {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+/*Seccion con formulario*/
+#container {
+  padding: 50px;
+  padding-top: 10px;
+}
+#container .image {
+  float: left;
+  width: 49%;
+}
+#container .data {
+  float: left;
+  width: 48%;
+  margin-left: 30px;
+}
+#container .image img {
+  width: 100%;
+}
+#container ul {
+  list-style: none;
+}
+#container h2 {
+  display: block;
+  padding-bottom: 10 px;
+  margin-bottom: 15 px;
+  border-bottom: 1px solid #ccc;
+}
+form {
+  width: 80%;
+}
+form label {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+  width: 40%;
+  padding: 5px;
+}
+form input[type="submit"],
+form button,
+.button-edit,
+.button-delete {
+  font-size: 17px;
+  display: block;
+  padding: 10px;
+  margin-top: 15px;
+  color: white;
+  background-color: rgba(53, 103, 164, 1);
+  cursor: pointer;
+}
+.button-edit,
+.button-delete {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+  background-color:rgba(53, 103, 164, 1);
+  overflow: hidden;
+}
+#image-button{
+  vertical-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+}
+form input[type="submit"]:hover,
+form button:hover {
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  margin-top: 15px;
+  color: white;
+  background-color: rgba(53, 103, 164, 0.8);
+  border: 1px solid rgb(2, 30, 65);
+  cursor: pointer;
+}
+form input[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.form_error {
+  color: white;
+  padding: 3px;
+  font-size: 13px;
+  background-color: red;
+  vertical-align: center;
+  margin-left: 5px;
+}
+.img-proyect{
+  float: right;
+}
+.message {
+  padding: 5px;
+  border: 1px solid #eee;
+  width: 50%;
+}
+.success {
+  background: green;
+  color: white;
+}
+.message a {
+  color: white;
+}
+.failed {
+  background: red;
+  color: white;
+}
+/*Pagina de proyectos*/
+.Project {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 27%;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Project .image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.Project img {
+  width: 100%;
+}
+.Project a {
+  text-decoration: none;
+  color: black;
+}

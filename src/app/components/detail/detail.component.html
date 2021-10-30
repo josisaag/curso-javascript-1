@@ -1,0 +1,17 @@
+<div id="container" *ngIf="error_res == ''">
+  <h1>{{ projectoDTO.name }}</h1>
+  <img class="img-proyect"
+    src="{{ url + 'get-image/' + projectoDTO.image }}"
+    *ngIf="projectoDTO.image"
+  />
+  <div class="data">
+    <h3>{{ projectoDTO.description }}</h3>
+    <p>{{ projectoDTO.category }}</p>
+    <p>{{ projectoDTO.langs }}</p>
+    <p><a [routerLink]="['/editar-proyecto',projectoDTO._id]" class="button-edit"><img id="image-button" src="../../../assets/img/btn_edit.png"/></a></p>
+    <p><a (click)="deleteProject(projectoDTO._id)" class="button-delete"><img id="image-button"  src="../../../assets/img/btn_delete.png"/></a></p>
+  </div>
+</div>
+<div id="error" *ngIf="error_res != ''">
+  <h1>No exite el proyecto</h1>
+</div>
